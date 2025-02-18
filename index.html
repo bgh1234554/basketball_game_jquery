@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농구 게임 구현하기 with JQuery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <script src="script/jquery.animateNumber.min.js"></script>
+  <script src="script/script2.js"></script>
+</head>
+<body>
+  <div class="div-scoreboard">
+    <div class="div-scoreboard-inner">
+      <div class="div-shots-left">
+        <span>남은 슛 횟수</span>
+        <span id="shots-left">15</span>
+      </div>
+      <div class="div-score">
+        <div class="div-score-name">컴퓨터</div>
+        <div id="computer-score" class="div-score-number">0</div>
+      </div>
+      <div class="div-score">
+        <div class="div-score-name">사용자</div>
+        <div id="user-score" class="div-score-number">0</div>
+      </div>
+      <div id="text">컴퓨터부터 시작합니다.</div>
+    </div>
+  </div>
+  <div class="div-control-panel">
+    <div id="div-computer" class="div-panel">
+      <div class="div-control-name">컴퓨터</div>
+      <button class="btn-computer" onclick=onComputerShoot()>슛하기</button>
+    </div>
+    <div id="div-user" class="div-panel">
+      <div class="div-control-name">사용자</div>
+      <button class="btn-user" onclick="onUserShoot(2)">2점슛</button>
+      <button class="btn-user" onclick="onUserShoot(3)">3점슛</button>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 1. shots-left : 남은 슛 횟수
+2. computer-score : 컴퓨터 현재 점수
+3. user-score : 사용자 현재 점수
+
+.클래스명 {}
+#아이디명 {}
+
+이 중 id값을 가지고 있는 DOM element들이 나중에 '동적으로' 바뀔 수 있는 부분이다.
+이후 값을 변경되게 하려면 해당 element를 지정할 수 있는 방법이 필요하기 때문에, 유일한 값인 id값을 넣어준다. -->
